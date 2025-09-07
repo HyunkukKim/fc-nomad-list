@@ -1,0 +1,76 @@
+---
+alwaysApply: true
+---
+
+# Next.js App Router 가이드
+
+## App Router 구조
+이 프로젝트는 Next.js 14의 App Router를 사용합니다.
+
+### 파일 구조
+```
+app/
+├── globals.css        # 전역 스타일
+├── layout.tsx         # 루트 레이아웃
+└── page.tsx           # 홈페이지
+```
+
+### 레이아웃 (layout.tsx)
+- 루트 레이아웃은 모든 페이지에 적용
+- 메타데이터 설정
+- 폰트 설정 (Geist Sans & Geist Mono)
+- Vercel Analytics 포함
+
+### 페이지 (page.tsx)
+- 홈페이지 컴포넌트
+- 클라이언트 컴포넌트로 설정 ("use client")
+- 상태 관리 (selectedContinent)
+
+### 스타일링
+- Tailwind CSS v4 사용
+- CSS 변수를 통한 테마 지원
+- 반응형 디자인
+
+## 컴포넌트 구조
+모든 컴포넌트는 "use client" 지시어를 사용하여 클라이언트 사이드에서 실행됩니다.
+
+## 메타데이터
+- SEO 최적화된 메타데이터 설정
+- 한국어 언어 설정
+- 적절한 제목과 설명
+# Next.js App Router 가이드
+
+## App Router 구조
+이 프로젝트는 Next.js 14의 App Router를 사용합니다.
+
+### 파일 구조
+```
+app/
+├── globals.css        # 전역 스타일
+├── layout.tsx         # 루트 레이아웃
+└── page.tsx           # 홈페이지
+```
+
+### 레이아웃 (layout.tsx)
+- 루트 레이아웃은 모든 페이지에 적용
+- 메타데이터 설정
+- 폰트 설정 (Geist Sans & Geist Mono)
+- Vercel Analytics 포함
+
+### 페이지 (page.tsx)
+- 홈페이지 컴포넌트
+- 클라이언트 컴포넌트로 설정 ("use client")
+- 상태 관리 (selectedContinent)
+
+### 스타일링
+- Tailwind CSS v4 사용
+- CSS 변수를 통한 테마 지원
+- 반응형 디자인
+
+## 컴포넌트 구조
+모든 컴포넌트는 "use client" 지시어를 사용하여 클라이언트 사이드에서 실행됩니다.
+
+## 메타데이터
+- SEO 최적화된 메타데이터 설정
+- 한국어 언어 설정
+- 적절한 제목과 설명

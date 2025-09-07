@@ -1,0 +1,100 @@
+---
+description: UI를 새로 만들거나 수정할때
+alwaysApply: false
+---
+# UI 컴포넌트 가이드
+
+## shadcn/ui 사용
+이 프로젝트는 shadcn/ui 컴포넌트 라이브러리를 사용합니다.
+
+### 주요 컴포넌트
+- **Card**: 도시 정보 카드
+- **Button**: 필터 버튼, CTA 버튼
+- **Badge**: 순위, 점수 표시
+- **Icons**: Lucide React 아이콘 사용
+
+### 스타일링 원칙
+1. **Tailwind CSS 클래스 우선 사용**
+2. **shadcn/ui 컴포넌트 커스터마이징**
+3. **CSS 변수를 통한 테마 지원**
+4. **모바일 우선 반응형 디자인**
+
+### 컴포넌트 구조
+```tsx
+"use client"
+
+import { Component } from "@/components/ui/component"
+
+interface ComponentProps {
+  // Props 타입 정의
+}
+
+export function Component({ prop }: ComponentProps) {
+  return (
+    // JSX 구조
+  )
+}
+```
+
+### 아이콘 사용
+- Lucide React 아이콘 사용
+- 일관된 크기 (w-4 h-4, w-6 h-6 등)
+- 의미에 맞는 아이콘 선택
+
+### 반응형 디자인
+- 모바일 우선 접근
+- md:, lg:, xl: 브레이크포인트 활용
+- 그리드 시스템 사용 (grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
+
+### 애니메이션
+- hover:scale-105 호버 효과
+- transition-all duration-300 부드러운 전환
+- animate-bounce 스크롤 인디케이터
+# UI 컴포넌트 가이드
+
+## shadcn/ui 사용
+이 프로젝트는 shadcn/ui 컴포넌트 라이브러리를 사용합니다.
+
+### 주요 컴포넌트
+- **Card**: 도시 정보 카드
+- **Button**: 필터 버튼, CTA 버튼
+- **Badge**: 순위, 점수 표시
+- **Icons**: Lucide React 아이콘 사용
+
+### 스타일링 원칙
+1. **Tailwind CSS 클래스 우선 사용**
+2. **shadcn/ui 컴포넌트 커스터마이징**
+3. **CSS 변수를 통한 테마 지원**
+4. **모바일 우선 반응형 디자인**
+
+### 컴포넌트 구조
+```tsx
+"use client"
+
+import { Component } from "@/components/ui/component"
+
+interface ComponentProps {
+  // Props 타입 정의
+}
+
+export function Component({ prop }: ComponentProps) {
+  return (
+    // JSX 구조
+  )
+}
+```
+
+### 아이콘 사용
+- Lucide React 아이콘 사용
+- 일관된 크기 (w-4 h-4, w-6 h-6 등)
+- 의미에 맞는 아이콘 선택
+
+### 반응형 디자인
+- 모바일 우선 접근
+- md:, lg:, xl: 브레이크포인트 활용
+- 그리드 시스템 사용 (grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
+
+### 애니메이션
+- hover:scale-105 호버 효과
+- transition-all duration-300 부드러운 전환
+- animate-bounce 스크롤 인디케이터

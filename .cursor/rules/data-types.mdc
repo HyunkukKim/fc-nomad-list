@@ -1,0 +1,175 @@
+---
+alwaysApply: true
+---
+
+# 데이터 타입 정의
+
+## 핵심 타입 정의
+
+### Continent 타입
+```typescript
+type Continent = "all" | "Asia" | "Europe" | "North America" | "South America" | "Africa" | "Middle East" | "Oceania"
+```
+
+### City 인터페이스
+```typescript
+interface City {
+  id: number
+  name: string
+  nameEn: string
+  country: string
+  countryEn: string
+  continent: Continent
+  image: string
+  monthlyCost: number
+  internetSpeed: number
+  temperature: number
+  overallScore: number
+  rank: number
+}
+```
+
+### ContinentOption 인터페이스
+```typescript
+interface ContinentOption {
+  id: Continent
+  name: string
+  emoji: string
+}
+```
+
+## 타입 사용 규칙
+
+### 1. 타입 정의 위치
+- 모든 타입 정의는 파일 상단에 위치
+- 인터페이스는 PascalCase로 명명
+- 타입 별칭은 PascalCase로 명명
+
+### 2. Props 인터페이스
+- 컴포넌트 Props는 컴포넌트 바로 위에 정의
+- Props 인터페이스명은 `{ComponentName}Props` 형식
+
+### 3. 데이터 구조
+- 도시 데이터는 City 인터페이스 준수
+- 대륙 데이터는 ContinentOption 인터페이스 준수
+- 모든 필드는 필수로 정의
+
+### 4. 타입 안전성
+- any 타입 사용 금지
+- unknown 타입 사용 시 적절한 타입 가드 구현
+- 옵셔널 프로퍼티는 명시적으로 ? 표시
+
+### 5. 유니온 타입
+- 리터럴 유니온 타입 사용 (예: Continent)
+- 복잡한 유니온은 별도 타입으로 분리
+
+## 데이터 검증
+
+### 1. 도시 데이터 검증
+- monthlyCost: 양수
+- internetSpeed: 양수 (Mbps)
+- temperature: -50 ~ 50 범위
+- overallScore: 0 ~ 5 범위
+- rank: 양수
+
+### 2. 이미지 경로 검증
+- /city/ 디렉토리 내 파일만 허용
+- .jpg, .webp 확장자만 허용
+- alt 텍스트는 한국어로 작성
+
+## 타입 확장 가이드
+
+### 새로운 도시 추가 시
+1. City 인터페이스에 새 필드 추가
+2. 기존 도시 데이터에 기본값 설정
+3. 타입 검증 로직 업데이트
+
+### 새로운 대륙 추가 시
+1. Continent 타입에 새 리터럴 추가
+2. ContinentOption 배열에 새 옵션 추가
+3. 필터링 로직 업데이트# 데이터 타입 정의
+
+## 핵심 타입 정의
+
+### Continent 타입
+```typescript
+type Continent = "all" | "Asia" | "Europe" | "North America" | "South America" | "Africa" | "Middle East" | "Oceania"
+```
+
+### City 인터페이스
+```typescript
+interface City {
+  id: number
+  name: string
+  nameEn: string
+  country: string
+  countryEn: string
+  continent: Continent
+  image: string
+  monthlyCost: number
+  internetSpeed: number
+  temperature: number
+  overallScore: number
+  rank: number
+}
+```
+
+### ContinentOption 인터페이스
+```typescript
+interface ContinentOption {
+  id: Continent
+  name: string
+  emoji: string
+}
+```
+
+## 타입 사용 규칙
+
+### 1. 타입 정의 위치
+- 모든 타입 정의는 파일 상단에 위치
+- 인터페이스는 PascalCase로 명명
+- 타입 별칭은 PascalCase로 명명
+
+### 2. Props 인터페이스
+- 컴포넌트 Props는 컴포넌트 바로 위에 정의
+- Props 인터페이스명은 `{ComponentName}Props` 형식
+
+### 3. 데이터 구조
+- 도시 데이터는 City 인터페이스 준수
+- 대륙 데이터는 ContinentOption 인터페이스 준수
+- 모든 필드는 필수로 정의
+
+### 4. 타입 안전성
+- any 타입 사용 금지
+- unknown 타입 사용 시 적절한 타입 가드 구현
+- 옵셔널 프로퍼티는 명시적으로 ? 표시
+
+### 5. 유니온 타입
+- 리터럴 유니온 타입 사용 (예: Continent)
+- 복잡한 유니온은 별도 타입으로 분리
+
+## 데이터 검증
+
+### 1. 도시 데이터 검증
+- monthlyCost: 양수
+- internetSpeed: 양수 (Mbps)
+- temperature: -50 ~ 50 범위
+- overallScore: 0 ~ 5 범위
+- rank: 양수
+
+### 2. 이미지 경로 검증
+- /city/ 디렉토리 내 파일만 허용
+- .jpg, .webp 확장자만 허용
+- alt 텍스트는 한국어로 작성
+
+## 타입 확장 가이드
+
+### 새로운 도시 추가 시
+1. City 인터페이스에 새 필드 추가
+2. 기존 도시 데이터에 기본값 설정
+3. 타입 검증 로직 업데이트
+
+### 새로운 대륙 추가 시
+1. Continent 타입에 새 리터럴 추가
+2. ContinentOption 배열에 새 옵션 추가
+3. 필터링 로직 업데이트
